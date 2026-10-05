@@ -1471,13 +1471,13 @@ footer{
 </section>
 <section class="section main-content" id="aboutSection">
   <div class="about-card">
-    <h2>عن <span>السوق الصيني</span></h2>
-    <p>متجرك الإلكتروني الموثوق لأفضل المنتجات الصينية الأصلية. نوفر لك تشكيلة واسعة من الأدوات الكهربائية والمنزلية والهدايا والألعاب والمكتبة، بجودة عالية وأسعار منافسة.</p>
-    <p>نعتمد على الدفع عبر <strong>شام كاش</strong> لتجربة دفع آمنة وسريعة.</p>
+    <h2 id="aboutTitle">عن <span>السوق الصيني</span></h2>
+    <p id="aboutP1">متجرك الإلكتروني الموثوق لأفضل المنتجات الصينية الأصلية. نوفر لك تشكيلة واسعة من الأدوات الكهربائية والمنزلية والهدايا والألعاب والمكتبة، بجودة عالية وأسعار منافسة.</p>
+    <p id="aboutP2">نعتمد على الدفع عبر <strong>شام كاش</strong> لتجربة دفع آمنة وسريعة.</p>
     <div class="about-stats">
-      <div class="stat"><div class="num">+5000</div><div class="lbl">منتج</div></div>
-      <div class="stat"><div class="num">+15K</div><div class="lbl">عميل</div></div>
-      <div class="stat"><div class="num">4.9</div><div class="lbl">تقييم</div></div>
+      <div class="stat"><div class="num" id="aboutStat1">+5000</div><div class="lbl">منتج</div></div>
+      <div class="stat"><div class="num" id="aboutStat2">+15K</div><div class="lbl">عميل</div></div>
+      <div class="stat"><div class="num" id="aboutStat3">4.9</div><div class="lbl">تقييم</div></div>
     </div>
   </div>
 </section>
@@ -1491,28 +1491,28 @@ footer{
       <div class="info-icon"><i class="fas fa-map-marker-alt"></i></div>
       <div class="info-text">
         <div class="lbl">العنوان</div>
-        <div class="val">عفرين - شارع راجو - عبارة الزهور - جنب مطعم تشيكن ناغيت</div>
+        <div class="val" id="contactAddress">عفرين - شارع راجو - عبارة الزهور - جنب مطعم تشيكن ناغيت</div>
       </div>
     </div>
     <div class="info-row">
       <div class="info-icon"><i class="fab fa-facebook-f"></i></div>
       <div class="info-text">
         <div class="lbl">فيسبوك</div>
-        <a class="val link" href="https://www.facebook.com/share/1DqxSRPvxK/" target="_blank" rel="noopener">زيارة صفحتنا على فيسبوك</a>
+        <a class="val link" id="contactFacebook" href="https://www.facebook.com/share/1DqxSRPvxK/" target="_blank" rel="noopener">زيارة صفحتنا على فيسبوك</a>
       </div>
     </div>
     <div class="info-row">
       <div class="info-icon"><i class="fab fa-whatsapp"></i></div>
       <div class="info-text">
         <div class="lbl">واتساب</div>
-        <a class="val link ltr" href="https://wa.me/963968930984" target="_blank" rel="noopener">+963 968 930 984</a>
+        <a class="val link ltr" id="contactWhatsapp" href="https://wa.me/963968930984" target="_blank" rel="noopener">+963 968 930 984</a>
       </div>
     </div>
     <div class="info-row">
       <div class="info-icon"><i class="fas fa-envelope"></i></div>
       <div class="info-text">
         <div class="lbl">البريد الإلكتروني</div>
-        <a class="val link" href="mailto:mohammedshekho1155@gmail.com">mohammedshekho1155@gmail.com</a>
+        <a class="val link" id="contactEmail" href="mailto:mohammedshekho1155@gmail.com">mohammedshekho1155@gmail.com</a>
       </div>
     </div>
     <div class="info-row">
@@ -1779,15 +1779,28 @@ try {
 
 const SHAM_ID = 'f0f1de509939474be71094579523fb3d';
 
-const mainCategories = [
-  {id:'offers',      name:'العروضات', icon:'fa-fire',  isSpecial:true},
-  {id:'electronics', name:'كهربائية', icon:'fa-plug'},
-  {id:'home',        name:'منزلية',  icon:'fa-home'},
-  {id:'gifts',       name:'هدايا',   icon:'fa-gift'},
-  {id:'toys',        name:'ألعاب',   icon:'fa-gamepad'},
-  {id:'library',     name:'مكتبة',   icon:'fa-book'}
-];
+/* =========================================================
+   ✅ قراءة الأقسام الرئيسية من localStorage
+   ========================================================= */
+function loadMainCategoriesFromStorage() {
+  try {
+    const raw = localStorage.getItem('cm_main_categories');
+    if (raw) return JSON.parse(raw);
+  } catch(e) {}
+  return [
+    {id:'offers',      name:'العروضات', icon:'fa-fire',  isSpecial:true},
+    {id:'electronics', name:'أدوات كهربائية', icon:'fa-plug'},
+    {id:'home',        name:'أدوات منزلية', icon:'fa-home'},
+    {id:'gifts',       name:'هدايا', icon:'fa-gift'},
+    {id:'toys',        name:'ألعاب', icon:'fa-gamepad'},
+    {id:'library',     name:'مكتبة', icon:'fa-book'}
+  ];
+}
+const mainCategories = loadMainCategoriesFromStorage();
 
+/* =========================================================
+   ✅ قراءة الأقسام الفرعية من localStorage
+   ========================================================= */
 const DEFAULT_SUBCATEGORIES = {
   electronics:[{id:'chargers',name:'شواحن'},{id:'headphones',name:'سماعات'},{id:'powerbanks',name:'باور بانك'},{id:'lights',name:'إضاءة'}],
   home:[{id:'kitchen',name:'مطبخ'},{id:'cleaning',name:'تنظيف'},{id:'decor',name:'ديكور'}],
@@ -1903,9 +1916,104 @@ function showToast(msg, type='success'){
 }
 
 /* =========================================================
-   DELIVERY TOAST - سعر التوصيل 1$ - 5$
+   ✅ تطبيق إعدادات المتجر من localStorage
+   ========================================================= */
+function loadStoreSettings() {
+  try {
+    const raw = localStorage.getItem('cm_store_settings');
+    if (raw) return JSON.parse(raw);
+  } catch(e) {}
+  return null;
+}
+
+function applyStoreSettings() {
+  const settings = loadStoreSettings();
+  if (!settings) return;
+  
+  // === وصف المتجر ===
+  if (settings.about) {
+    const titleEl = document.getElementById('aboutTitle');
+    if (titleEl && settings.about.title) {
+      titleEl.innerHTML = settings.about.title.replace('السوق الصيني', '<span>السوق الصيني</span>');
+    }
+    const p1 = document.getElementById('aboutP1');
+    if (p1 && settings.about.p1) p1.textContent = settings.about.p1;
+    
+    const p2 = document.getElementById('aboutP2');
+    if (p2 && settings.about.p2) {
+      p2.innerHTML = settings.about.p2.replace('شام كاش', '<strong>شام كاش</strong>');
+    }
+    
+    const s1 = document.getElementById('aboutStat1');
+    const s2 = document.getElementById('aboutStat2');
+    const s3 = document.getElementById('aboutStat3');
+    if (s1 && settings.about.stat1) s1.textContent = settings.about.stat1;
+    if (s2 && settings.about.stat2) s2.textContent = settings.about.stat2;
+    if (s3 && settings.about.stat3) s3.textContent = settings.about.stat3;
+  }
+  
+  // === معلومات التواصل ===
+  if (settings.contact) {
+    const addr = document.getElementById('contactAddress');
+    if (addr && settings.contact.address) addr.textContent = settings.contact.address;
+    
+    const fb = document.getElementById('contactFacebook');
+    if (fb && settings.contact.facebook) fb.href = settings.contact.facebook;
+    
+    const wa = document.getElementById('contactWhatsapp');
+    if (wa && settings.contact.whatsapp) {
+      wa.href = 'https://wa.me/' + settings.contact.whatsapp.replace(/[^0-9]/g, '');
+      wa.textContent = settings.contact.whatsapp;
+    }
+    
+    const em = document.getElementById('contactEmail');
+    if (em && settings.contact.email) {
+      em.href = 'mailto:' + settings.contact.email;
+      em.textContent = settings.contact.email;
+    }
+    
+    // تحديث روابط الفوتر
+    document.querySelectorAll('a[href^="https://wa.me/"]').forEach(a => {
+      if (settings.contact.whatsapp) {
+        a.href = 'https://wa.me/' + settings.contact.whatsapp.replace(/[^0-9]/g, '');
+      }
+    });
+    document.querySelectorAll('a[href^="mailto:"]').forEach(a => {
+      if (settings.contact.email) {
+        a.href = 'mailto:' + settings.contact.email;
+      }
+    });
+    document.querySelectorAll('a[href*="facebook.com"]').forEach(a => {
+      if (settings.contact.facebook) {
+        a.href = settings.contact.facebook;
+      }
+    });
+  }
+  
+  // === معلومات التوصيل ===
+  if (settings.delivery) {
+    const city = settings.delivery.city || 'عفرين';
+    const min = settings.delivery.min || 1;
+    const max = settings.delivery.max || 5;
+    
+    document.querySelectorAll('.delivery-notice-content p').forEach(el => {
+      el.innerHTML = el.innerHTML
+        .replace(/داخل مدينة <strong>.*?<\/strong>/g, `داخل مدينة <strong>${city}</strong>`)
+        .replace(/<span class="price-range">.*?<\/span>/g, 
+          `<span class="price-range"><i class="fas fa-dollar-sign"></i>${min} - ${max}$</span>`);
+    });
+  }
+}
+
+/* =========================================================
+   DELIVERY TOAST
    ========================================================= */
 function showDeliveryToast(orderId){
+  const settings = loadStoreSettings();
+  const city = settings?.delivery?.city || 'عفرين';
+  const min = settings?.delivery?.min || 1;
+  const max = settings?.delivery?.max || 5;
+  
   const c = document.getElementById('toastContainer');
   const t = document.createElement('div');
   t.className = 'toast delivery-toast';
@@ -1916,9 +2024,9 @@ function showDeliveryToast(orderId){
     <div class="toast-text">
       <strong>✓ تم استلام طلبك بنجاح!</strong>
       <small>
-        <i class="fas fa-map-marker-alt"></i> التوصيل متاح داخل عفرين فقط
+        <i class="fas fa-map-marker-alt"></i> التوصيل متاح داخل ${city} فقط
         <br>
-        <i class="fas fa-dollar-sign"></i> رسوم التوصيل: 1$ - 5$ حسب حجم الفاتورة والمسافة
+        <i class="fas fa-dollar-sign"></i> رسوم التوصيل: ${min}$ - ${max}$ حسب حجم الفاتورة والمسافة
       </small>
     </div>
   `;
@@ -2652,16 +2760,21 @@ function renderMyOrders(){
     return;
   }
   
+  const settings = loadStoreSettings();
+  const city = settings?.delivery?.city || 'عفرين';
+  const min = settings?.delivery?.min || 1;
+  const max = settings?.delivery?.max || 5;
+  
   body.innerHTML = `
     <div class="delivery-notice" style="margin-bottom:14px">
       <div class="delivery-notice-icon">
         <i class="fas fa-truck-fast"></i>
       </div>
       <div class="delivery-notice-content">
-        <h4><i class="fas fa-map-marker-alt"></i> التوصيل متاح داخل عفرين</h4>
+        <h4><i class="fas fa-map-marker-alt"></i> التوصيل متاح داخل ${city}</h4>
         <p>
           رسوم التوصيل:
-          <span class="price-range"><i class="fas fa-dollar-sign"></i>1 - 5$</span>
+          <span class="price-range"><i class="fas fa-dollar-sign"></i>${min} - ${max}$</span>
           حسب حجم الفاتورة والمسافة.
         </p>
       </div>
@@ -2894,6 +3007,11 @@ function openCheckout(){
     return s + price*i.qty;
   },0);
   
+  const settings = loadStoreSettings();
+  const city = settings?.delivery?.city || 'عفرين';
+  const min = settings?.delivery?.min || 1;
+  const max = settings?.delivery?.max || 5;
+  
   document.getElementById('checkoutBody').innerHTML = `
     <h2 style="font-size:1.15rem;font-weight:900;margin-bottom:6px;display:flex;align-items:center;gap:8px">
       <i class="fas fa-credit-card" style="color:var(--sham)"></i> إتمام الشراء
@@ -2931,10 +3049,10 @@ function openCheckout(){
       <div class="delivery-notice-content">
         <h4><i class="fas fa-map-marker-alt"></i> خدمة التوصيل متاحة الآن</h4>
         <p>
-          متوفرة داخل مدينة <strong>عفرين</strong> فقط.
+          متوفرة داخل مدينة <strong>${city}</strong> فقط.
           <br>
           التوصيل من
-          <span class="price-range"><i class="fas fa-dollar-sign"></i>1 - 5$</span>
+          <span class="price-range"><i class="fas fa-dollar-sign"></i>${min} - ${max}$</span>
           حسب حجم الفاتورة والمسافة المقطوعة.
         </p>
       </div>
@@ -3100,6 +3218,11 @@ async function confirmOrder(){
   showOrderSuccess(order);
 }
 function showOrderSuccess(order){
+  const settings = loadStoreSettings();
+  const city = settings?.delivery?.city || 'عفرين';
+  const min = settings?.delivery?.min || 1;
+  const max = settings?.delivery?.max || 5;
+  
   document.getElementById('checkoutBody').innerHTML = `
     <div style="text-align:center;padding:16px 0">
       <div style="width:80px;height:80px;margin:0 auto 16px;border-radius:50%;background:linear-gradient(135deg,var(--warning),#d97706);display:flex;align-items:center;justify-content:center;font-size:2.2rem;color:#fff;box-shadow:0 10px 25px rgba(245,158,11,0.35);animation:popIn .5s">
@@ -3120,10 +3243,10 @@ function showOrderSuccess(order){
         <div class="delivery-notice-content">
           <h4><i class="fas fa-map-marker-alt"></i> خدمة التوصيل متاحة</h4>
           <p>
-            داخل مدينة <strong>عفرين</strong> فقط.
+            داخل مدينة <strong>${city}</strong> فقط.
             <br>
             رسوم التوصيل من
-            <span class="price-range"><i class="fas fa-dollar-sign"></i>1 - 5$</span>
+            <span class="price-range"><i class="fas fa-dollar-sign"></i>${min} - ${max}$</span>
             حسب حجم الفاتورة والمسافة.
           </p>
         </div>
@@ -3227,6 +3350,9 @@ window.addEventListener('load', async () => {
   initLogos();
   initShamQR();
   
+  // ✅ تطبيق إعدادات المتجر
+  applyStoreSettings();
+  
   products = [...FALLBACK_PRODUCTS];
   renderCategories();
   renderSubChips();
@@ -3242,6 +3368,7 @@ window.addEventListener('load', async () => {
   console.log('');
   console.log('%c🎯 السوق الصيني - جاهز','background:#dc2626;color:white;padding:4px 8px;border-radius:4px;font-weight:bold');
   console.log('%c🚚 إشعار التوصيل: عفرين فقط - 1$ إلى 5$','color:#3b82f6;font-weight:bold');
+  console.log('%c⚙️ الأقسام والإعدادات من localStorage','color:#8b5cf6;font-weight:bold');
   console.log('');
 });
 </script>
