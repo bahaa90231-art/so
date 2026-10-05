@@ -44,7 +44,6 @@ input,textarea,select{font-family:inherit;outline:none;font-size:16px}
 ::-webkit-scrollbar{width:5px;height:5px}
 ::-webkit-scrollbar-thumb{background:#cbd5e1;border-radius:10px}
 
-/* Loading Overlay */
 .loading-overlay{
   position:fixed;inset:0;z-index:9999;
   background:var(--white);
@@ -62,7 +61,6 @@ input,textarea,select{font-family:inherit;outline:none;font-size:16px}
 @keyframes spin{to{transform:rotate(360deg)}}
 .loading-overlay p{font-size:.85rem;color:var(--gray);font-weight:700}
 
-/* Header */
 header{
   position:sticky;top:0;left:0;right:0;z-index:100;
   background:var(--white);
@@ -129,7 +127,6 @@ header.scrolled{box-shadow:0 2px 12px rgba(0,0,0,0.06)}
 }
 .avatar-btn:active{transform:scale(0.92)}
 
-/* Search */
 .search-wrap{padding:0 12px 10px}
 .search-bar{position:relative}
 .search-bar input{
@@ -141,7 +138,6 @@ header.scrolled{box-shadow:0 2px 12px rgba(0,0,0,0.06)}
 .search-bar input:focus{border-color:var(--primary);background:var(--white);box-shadow:0 0 0 3px rgba(220,38,38,0.08)}
 .search-bar i{position:absolute;right:14px;top:50%;transform:translateY(-50%);color:var(--gray);font-size:.85rem}
 
-/* Track Strip */
 .track-strip{
   background:linear-gradient(135deg,#f0fdf4,#dcfce7);
   border-radius:12px;padding:12px 14px;
@@ -161,7 +157,6 @@ header.scrolled{box-shadow:0 2px 12px rgba(0,0,0,0.06)}
 .track-strip .track-text small{font-size:.7rem;color:#047857;font-weight:600}
 .track-strip i.track-arrow{color:#059669;font-size:.9rem}
 
-/* Delivery Notice */
 .delivery-notice{
   background:linear-gradient(135deg,#dbeafe,#bfdbfe);
   border:2px solid #3b82f6;
@@ -214,11 +209,9 @@ header.scrolled{box-shadow:0 2px 12px rgba(0,0,0,0.06)}
   margin:0 2px;
 }
 
-/* Main Content */
 .main-content{transition:opacity .3s}
 .main-content.hidden{display:none}
 
-/* Top Deal Section */
 .top-deal-section{
   max-width:1400px;
   margin:16px auto 0;
@@ -341,7 +334,6 @@ header.scrolled{box-shadow:0 2px 12px rgba(0,0,0,0.06)}
 }
 .top-deal-btn-outline:hover{background:rgba(255,255,255,0.25)}
 
-/* Hero */
 .hero{padding:16px 12px}
 .hero-inner{
   background:linear-gradient(135deg,#fff5f5,#fef3c7);
@@ -391,7 +383,6 @@ header.scrolled{box-shadow:0 2px 12px rgba(0,0,0,0.06)}
   border:1.5px solid var(--border);
 }
 
-/* Section */
 .section{padding:20px 12px}
 .section-head{
   display:flex;justify-content:space-between;
@@ -429,7 +420,6 @@ header.scrolled{box-shadow:0 2px 12px rgba(0,0,0,0.06)}
 }
 .back-to-shop.show{display:inline-flex}
 
-/* Categories */
 .cats-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
 .cat-card{
   background:var(--white);border-radius:12px;
@@ -505,7 +495,6 @@ header.scrolled{box-shadow:0 2px 12px rgba(0,0,0,0.06)}
 }
 .chip.active .count{background:rgba(255,255,255,0.25)}
 
-/* Products */
 .products{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}
 .product-card{
   background:var(--white);border-radius:12px;
@@ -582,7 +571,6 @@ header.scrolled{box-shadow:0 2px 12px rgba(0,0,0,0.06)}
 .empty h3{font-size:.9rem;font-weight:800;margin-bottom:4px}
 .empty p{font-size:.78rem;color:var(--gray)}
 
-/* Offers Mode Banner */
 .offers-mode-banner{
   background:linear-gradient(135deg,#dc2626,#b91c1c);
   color:var(--white);
@@ -622,7 +610,6 @@ header.scrolled{box-shadow:0 2px 12px rgba(0,0,0,0.06)}
 .offers-mode-stat .num{font-size:1.1rem;font-weight:900;color:var(--gold);line-height:1}
 .offers-mode-stat .lbl{font-size:.65rem;opacity:.9;margin-top:2px;font-weight:700}
 
-/* Offer ranking */
 .offer-rank-1{
   border:2px solid #fbbf24 !important;
   box-shadow:0 10px 30px rgba(251,191,36,0.4) !important;
@@ -664,7 +651,6 @@ header.scrolled{box-shadow:0 2px 12px rgba(0,0,0,0.06)}
   z-index:5;
 }
 
-/* About */
 .about-card{
   background:var(--white);border-radius:14px;
   padding:18px;border:1.5px solid var(--border);
@@ -681,7 +667,6 @@ header.scrolled{box-shadow:0 2px 12px rgba(0,0,0,0.06)}
 .stat .num{font-size:1.05rem;font-weight:900;color:var(--primary)}
 .stat .lbl{font-size:.62rem;color:var(--gray);font-weight:700;margin-top:2px}
 
-/* Info Card */
 .info-card{
   background:var(--white);border-radius:14px;
   padding:16px;border:1.5px solid var(--border);
@@ -740,7 +725,6 @@ header.scrolled{box-shadow:0 2px 12px rgba(0,0,0,0.06)}
 .sham-id i{color:var(--gray);font-size:.85rem}
 .sham-hint{font-size:.72rem;color:#5b21b6;font-weight:700;line-height:1.5}
 
-/* Footer */
 footer{
   background:var(--dark);color:#cbd5e1;
   padding:24px 14px 14px;margin-top:20px;
@@ -780,7 +764,6 @@ footer{
   padding-top:14px;border-top:1px solid rgba(255,255,255,0.08);
 }
 
-/* Overlay */
 .overlay{
   position:fixed;inset:0;background:rgba(15,23,42,0.6);
   z-index:200;opacity:0;visibility:hidden;
@@ -789,7 +772,6 @@ footer{
 }
 .overlay.active{opacity:1;visibility:visible}
 
-/* Side Menu */
 .side-menu{
   position:fixed;top:0;right:0;
   width:85%;max-width:320px;
@@ -876,7 +858,6 @@ footer{
   overflow:hidden;text-overflow:ellipsis;white-space:nowrap;display:block;
 }
 
-/* Drawers */
 .drawer{
   position:fixed;top:0;right:0;width:100%;max-width:440px;
   height:100vh;height:100dvh;background:var(--white);z-index:999;
@@ -962,7 +943,6 @@ footer{
 }
 .checkout-btn:active{transform:scale(0.97)}
 
-/* Order card */
 .order-card{
   background:var(--white);border-radius:12px;
   padding:12px;margin-bottom:10px;
@@ -995,7 +975,6 @@ footer{
 .order-btn-view{background:var(--light);color:var(--dark)}
 .order-btn-view:active{background:var(--primary);color:var(--white)}
 
-/* Tracking */
 .tracking-header{
   background:linear-gradient(135deg,#f0fdf4,#dcfce7);
   border-radius:14px;padding:14px 16px;
@@ -1060,7 +1039,6 @@ footer{
 .track-step:not(.completed):not(.active):not(.cancelled) .track-info h4{color:#94a3b8}
 .track-step:not(.completed):not(.active):not(.cancelled) .track-info p{color:#cbd5e1}
 
-/* Upload Box */
 .upload-box{
   background:linear-gradient(135deg,#f0fdf4,#dcfce7);
   border:2px dashed var(--success);
@@ -1102,7 +1080,6 @@ footer{
   color:#065f46;font-weight:800;word-break:break-all;
 }
 
-/* Modal */
 .modal{
   position:fixed;inset:0;z-index:3000;
   background:rgba(15,23,42,0.65);backdrop-filter:blur(4px);
@@ -1227,7 +1204,6 @@ footer{
 }
 .auth-error.show{display:block}
 
-/* Toast */
 .toast-container{
   position:fixed;top:70px;left:50%;
   transform:translateX(-50%);z-index:9999;
@@ -1270,7 +1246,6 @@ footer{
   display:block;
 }
 
-/* Responsive */
 @media(min-width:480px){
   body{font-size:15px}
   .nav{padding:10px 16px;gap:10px;min-height:58px}
@@ -1405,7 +1380,6 @@ footer{
 </div>
 
 <div class="main-content" id="mainContent">
-
   <section class="top-deal-section" id="topDealSection" style="display:none">
     <div class="top-deal-card">
       <div class="top-deal-label">
@@ -1469,6 +1443,7 @@ footer{
   </div>
   <div class="products" id="productsGrid"></div>
 </section>
+
 <section class="section main-content" id="aboutSection">
   <div class="about-card">
     <h2 id="aboutTitle">عن <span>السوق الصيني</span></h2>
@@ -1762,7 +1737,7 @@ footer{
 
 <script>
 /* =========================================================
-   SUPABASE CONFIGURATION
+   SUPABASE CONFIG
    ========================================================= */
 const SUPABASE_URL = 'https://azvgvdepkvfatfeozond.supabase.co';
 const SUPABASE_KEY = 'sb_publishable_mAzGRw5fdnfjEKJLtJSpuQ_xBh97sgJ';
@@ -1780,44 +1755,171 @@ try {
 const SHAM_ID = 'f0f1de509939474be71094579523fb3d';
 
 /* =========================================================
-   ✅ قراءة الأقسام الرئيسية من localStorage
+   STATE (يتم ملؤها من Supabase)
    ========================================================= */
-function loadMainCategoriesFromStorage() {
-  try {
-    const raw = localStorage.getItem('cm_main_categories');
-    if (raw) return JSON.parse(raw);
-  } catch(e) {}
-  return [
-    {id:'offers',      name:'العروضات', icon:'fa-fire',  isSpecial:true},
-    {id:'electronics', name:'أدوات كهربائية', icon:'fa-plug'},
-    {id:'home',        name:'أدوات منزلية', icon:'fa-home'},
-    {id:'gifts',       name:'هدايا', icon:'fa-gift'},
-    {id:'toys',        name:'ألعاب', icon:'fa-gamepad'},
-    {id:'library',     name:'مكتبة', icon:'fa-book'}
-  ];
-}
-const mainCategories = loadMainCategoriesFromStorage();
+let mainCategories = [];
+let subCategories = {};
+let storeSettings = null;
+
+const FALLBACK_MAIN_CATS = [
+  {id:'offers', name:'العروضات', icon:'fa-fire', isSpecial:true},
+  {id:'electronics', name:'أدوات كهربائية', icon:'fa-plug'},
+  {id:'home', name:'أدوات منزلية', icon:'fa-home'},
+  {id:'gifts', name:'هدايا', icon:'fa-gift'},
+  {id:'toys', name:'ألعاب', icon:'fa-gamepad'},
+  {id:'library', name:'مكتبة', icon:'fa-book'}
+];
 
 /* =========================================================
-   ✅ قراءة الأقسام الفرعية من localStorage
+   تحميل الأقسام والإعدادات من Supabase
    ========================================================= */
-const DEFAULT_SUBCATEGORIES = {
-  electronics:[{id:'chargers',name:'شواحن'},{id:'headphones',name:'سماعات'},{id:'powerbanks',name:'باور بانك'},{id:'lights',name:'إضاءة'}],
-  home:[{id:'kitchen',name:'مطبخ'},{id:'cleaning',name:'تنظيف'},{id:'decor',name:'ديكور'}],
-  gifts:[{id:'birthday',name:'عيد ميلاد'},{id:'wedding',name:'زفاف'},{id:'watches',name:'ساعات'}],
-  toys:[{id:'cars',name:'سيارات'},{id:'blocks',name:'مكعبات'},{id:'dolls',name:'دمى'}],
-  library:[{id:'pens',name:'أقلام'},{id:'notebooks',name:'دفاتر'},{id:'bags',name:'حقائب'}]
-};
-
-function loadSubCategoriesFromStorage() {
+async function loadAllFromSupabase() {
+  if (!db) {
+    mainCategories = [...FALLBACK_MAIN_CATS];
+    return;
+  }
+  
   try {
-    const raw = localStorage.getItem('cm_subcategories');
-    if (raw) return JSON.parse(raw);
-  } catch(e) {}
-  return JSON.parse(JSON.stringify(DEFAULT_SUBCATEGORIES));
+    // 1) الأقسام الرئيسية
+    const { data: cats, error: catErr } = await db
+      .from('main_categories')
+      .select('*')
+      .order('sort_order', { ascending: true });
+    
+    if (!catErr && cats && cats.length > 0) {
+      mainCategories = cats.map(c => ({
+        id: c.id,
+        name: c.name,
+        icon: c.icon || 'fa-folder',
+        isSpecial: c.is_special,
+        desc: c.description || ''
+      }));
+    } else {
+      mainCategories = [...FALLBACK_MAIN_CATS];
+    }
+    
+    // 2) الأقسام الفرعية
+    const { data: subs, error: subErr } = await db
+      .from('sub_categories')
+      .select('*')
+      .order('sort_order', { ascending: true });
+    
+    if (!subErr && subs) {
+      subCategories = {};
+      subs.forEach(s => {
+        if (!subCategories[s.main_cat_id]) subCategories[s.main_cat_id] = [];
+        subCategories[s.main_cat_id].push({ id: s.id, name: s.name });
+      });
+    }
+    
+    // 3) الإعدادات
+    const { data: settings, error: setErr } = await db
+      .from('store_settings')
+      .select('*')
+      .eq('id', 1)
+      .single();
+    
+    if (!setErr && settings) {
+      storeSettings = {
+        about: {
+          title: settings.about_title,
+          p1: settings.about_p1,
+          p2: settings.about_p2,
+          stat1: settings.about_stat1,
+          stat2: settings.about_stat2,
+          stat3: settings.about_stat3
+        },
+        contact: {
+          address: settings.contact_address,
+          facebook: settings.contact_facebook,
+          whatsapp: settings.contact_whatsapp,
+          email: settings.contact_email
+        },
+        delivery: {
+          city: settings.delivery_city || 'عفرين',
+          min: parseFloat(settings.delivery_min) || 1,
+          max: parseFloat(settings.delivery_max) || 5
+        }
+      };
+    }
+    
+    console.log('✅ تم تحميل البيانات من Supabase');
+  } catch(e) {
+    console.error('❌ فشل تحميل البيانات:', e);
+    if (mainCategories.length === 0) mainCategories = [...FALLBACK_MAIN_CATS];
+  }
 }
-const subCategories = loadSubCategoriesFromStorage();
 
+/* =========================================================
+   تطبيق الإعدادات على الصفحة
+   ========================================================= */
+function applyStoreSettings() {
+  if (!storeSettings) return;
+  
+  // === وصف المتجر ===
+  if (storeSettings.about) {
+    const titleEl = document.getElementById('aboutTitle');
+    if (titleEl && storeSettings.about.title) {
+      titleEl.innerHTML = storeSettings.about.title.replace('السوق الصيني', '<span>السوق الصيني</span>');
+    }
+    const p1 = document.getElementById('aboutP1');
+    if (p1 && storeSettings.about.p1) p1.textContent = storeSettings.about.p1;
+    
+    const p2 = document.getElementById('aboutP2');
+    if (p2 && storeSettings.about.p2) {
+      p2.innerHTML = storeSettings.about.p2.replace('شام كاش', '<strong>شام كاش</strong>');
+    }
+    
+    const s1 = document.getElementById('aboutStat1');
+    const s2 = document.getElementById('aboutStat2');
+    const s3 = document.getElementById('aboutStat3');
+    if (s1 && storeSettings.about.stat1) s1.textContent = storeSettings.about.stat1;
+    if (s2 && storeSettings.about.stat2) s2.textContent = storeSettings.about.stat2;
+    if (s3 && storeSettings.about.stat3) s3.textContent = storeSettings.about.stat3;
+  }
+  
+  // === معلومات التواصل ===
+  if (storeSettings.contact) {
+    const addr = document.getElementById('contactAddress');
+    if (addr && storeSettings.contact.address) addr.textContent = storeSettings.contact.address;
+    
+    const fb = document.getElementById('contactFacebook');
+    if (fb && storeSettings.contact.facebook) fb.href = storeSettings.contact.facebook;
+    
+    const wa = document.getElementById('contactWhatsapp');
+    if (wa && storeSettings.contact.whatsapp) {
+      wa.href = 'https://wa.me/' + storeSettings.contact.whatsapp.replace(/[^0-9]/g, '');
+      wa.textContent = storeSettings.contact.whatsapp;
+    }
+    
+    const em = document.getElementById('contactEmail');
+    if (em && storeSettings.contact.email) {
+      em.href = 'mailto:' + storeSettings.contact.email;
+      em.textContent = storeSettings.contact.email;
+    }
+    
+    // تحديث روابط الفوتر
+    document.querySelectorAll('a[href^="https://wa.me/"]').forEach(a => {
+      if (storeSettings.contact.whatsapp) {
+        a.href = 'https://wa.me/' + storeSettings.contact.whatsapp.replace(/[^0-9]/g, '');
+      }
+    });
+    document.querySelectorAll('a[href^="mailto:"]').forEach(a => {
+      if (storeSettings.contact.email) {
+        a.href = 'mailto:' + storeSettings.contact.email;
+      }
+    });
+    document.querySelectorAll('a[href*="facebook.com"]').forEach(a => {
+      if (storeSettings.contact.facebook) {
+        a.href = storeSettings.contact.facebook;
+      }
+    });
+  }
+}
+
+/* =========================================================
+   PRODUCTS
+   ========================================================= */
 const FALLBACK_PRODUCTS = [
   {id:1,name:"شاحن سريع 65W GaN",main_cat:"electronics",sub_cat:"chargers",price_usd:12.99,old_price_usd:19.99,img:"https://images.unsplash.com/photo-1583863788434-e58a36330cf0?w=500",rating:4.8,reviews:234,badge:"discount",desc:"شاحن سريع بتقنية GaN، 65W."},
   {id:2,name:"سماعات بلوتوث TWS",main_cat:"electronics",sub_cat:"headphones",price_usd:15.99,old_price_usd:24.99,img:"https://images.unsplash.com/photo-1590658268037-6bf12165a8df?w=500",rating:4.7,reviews:512,badge:"hot",desc:"سماعات بلوتوث لاسلكية."},
@@ -1916,103 +2018,12 @@ function showToast(msg, type='success'){
 }
 
 /* =========================================================
-   ✅ تطبيق إعدادات المتجر من localStorage
-   ========================================================= */
-function loadStoreSettings() {
-  try {
-    const raw = localStorage.getItem('cm_store_settings');
-    if (raw) return JSON.parse(raw);
-  } catch(e) {}
-  return null;
-}
-
-function applyStoreSettings() {
-  const settings = loadStoreSettings();
-  if (!settings) return;
-  
-  // === وصف المتجر ===
-  if (settings.about) {
-    const titleEl = document.getElementById('aboutTitle');
-    if (titleEl && settings.about.title) {
-      titleEl.innerHTML = settings.about.title.replace('السوق الصيني', '<span>السوق الصيني</span>');
-    }
-    const p1 = document.getElementById('aboutP1');
-    if (p1 && settings.about.p1) p1.textContent = settings.about.p1;
-    
-    const p2 = document.getElementById('aboutP2');
-    if (p2 && settings.about.p2) {
-      p2.innerHTML = settings.about.p2.replace('شام كاش', '<strong>شام كاش</strong>');
-    }
-    
-    const s1 = document.getElementById('aboutStat1');
-    const s2 = document.getElementById('aboutStat2');
-    const s3 = document.getElementById('aboutStat3');
-    if (s1 && settings.about.stat1) s1.textContent = settings.about.stat1;
-    if (s2 && settings.about.stat2) s2.textContent = settings.about.stat2;
-    if (s3 && settings.about.stat3) s3.textContent = settings.about.stat3;
-  }
-  
-  // === معلومات التواصل ===
-  if (settings.contact) {
-    const addr = document.getElementById('contactAddress');
-    if (addr && settings.contact.address) addr.textContent = settings.contact.address;
-    
-    const fb = document.getElementById('contactFacebook');
-    if (fb && settings.contact.facebook) fb.href = settings.contact.facebook;
-    
-    const wa = document.getElementById('contactWhatsapp');
-    if (wa && settings.contact.whatsapp) {
-      wa.href = 'https://wa.me/' + settings.contact.whatsapp.replace(/[^0-9]/g, '');
-      wa.textContent = settings.contact.whatsapp;
-    }
-    
-    const em = document.getElementById('contactEmail');
-    if (em && settings.contact.email) {
-      em.href = 'mailto:' + settings.contact.email;
-      em.textContent = settings.contact.email;
-    }
-    
-    // تحديث روابط الفوتر
-    document.querySelectorAll('a[href^="https://wa.me/"]').forEach(a => {
-      if (settings.contact.whatsapp) {
-        a.href = 'https://wa.me/' + settings.contact.whatsapp.replace(/[^0-9]/g, '');
-      }
-    });
-    document.querySelectorAll('a[href^="mailto:"]').forEach(a => {
-      if (settings.contact.email) {
-        a.href = 'mailto:' + settings.contact.email;
-      }
-    });
-    document.querySelectorAll('a[href*="facebook.com"]').forEach(a => {
-      if (settings.contact.facebook) {
-        a.href = settings.contact.facebook;
-      }
-    });
-  }
-  
-  // === معلومات التوصيل ===
-  if (settings.delivery) {
-    const city = settings.delivery.city || 'عفرين';
-    const min = settings.delivery.min || 1;
-    const max = settings.delivery.max || 5;
-    
-    document.querySelectorAll('.delivery-notice-content p').forEach(el => {
-      el.innerHTML = el.innerHTML
-        .replace(/داخل مدينة <strong>.*?<\/strong>/g, `داخل مدينة <strong>${city}</strong>`)
-        .replace(/<span class="price-range">.*?<\/span>/g, 
-          `<span class="price-range"><i class="fas fa-dollar-sign"></i>${min} - ${max}$</span>`);
-    });
-  }
-}
-
-/* =========================================================
    DELIVERY TOAST
    ========================================================= */
 function showDeliveryToast(orderId){
-  const settings = loadStoreSettings();
-  const city = settings?.delivery?.city || 'عفرين';
-  const min = settings?.delivery?.min || 1;
-  const max = settings?.delivery?.max || 5;
+  const city = storeSettings?.delivery?.city || 'عفرين';
+  const min = storeSettings?.delivery?.min || 1;
+  const max = storeSettings?.delivery?.max || 5;
   
   const c = document.getElementById('toastContainer');
   const t = document.createElement('div');
@@ -2214,6 +2225,8 @@ function renderTopDeal() {
    ========================================================= */
 function renderCategories(){
   const grid = document.getElementById('catsGrid');
+  if (!grid) return;
+  
   const items = [
     {id:'all', name:'الكل', icon:'fa-th-large', count: products.length},
     ...mainCategories.map(c => {
@@ -2237,15 +2250,20 @@ function renderCategories(){
     </div>
   `).join('');
   
-  document.getElementById('sideMenuCats').innerHTML = mainCategories.map(c =>
-    `<button class="side-item ${c.id==='offers'?'danger':''}" onclick="closeSideMenu();selectMain('${c.id}')">
-      <i class="fas ${c.icon}"></i> ${c.name}
-    </button>`
-  ).join('');
+  const sideMenuCats = document.getElementById('sideMenuCats');
+  if (sideMenuCats) {
+    sideMenuCats.innerHTML = mainCategories.map(c =>
+      `<button class="side-item ${c.id==='offers'?'danger':''}" onclick="closeSideMenu();selectMain('${c.id}')">
+        <i class="fas ${c.icon}"></i> ${c.name}
+      </button>`
+    ).join('');
+  }
 }
 
 function renderSubChips(){
   const wrap = document.getElementById('subChips');
+  if (!wrap) return;
+  
   if (currentMain === 'all' || currentMain === 'offers'){ 
     wrap.style.display='none'; 
     return; 
@@ -2341,6 +2359,7 @@ function showMainContent() {
 function renderProducts(){
   const grid = document.getElementById('productsGrid');
   const titleEl = document.getElementById('productsTitle');
+  if (!grid) return;
   
   let filtered;
   
@@ -2760,10 +2779,9 @@ function renderMyOrders(){
     return;
   }
   
-  const settings = loadStoreSettings();
-  const city = settings?.delivery?.city || 'عفرين';
-  const min = settings?.delivery?.min || 1;
-  const max = settings?.delivery?.max || 5;
+  const city = storeSettings?.delivery?.city || 'عفرين';
+  const min = storeSettings?.delivery?.min || 1;
+  const max = storeSettings?.delivery?.max || 5;
   
   body.innerHTML = `
     <div class="delivery-notice" style="margin-bottom:14px">
@@ -2838,7 +2856,6 @@ async function trackOrder(){
   `;
   
   let order = null;
-  let source = 'local';
   
   if (db) {
     try {
@@ -2866,7 +2883,6 @@ async function trackOrder(){
           totalUSD: parseFloat(d.total_usd || 0),
           cancelReason: d.cancel_reason || ''
         };
-        source = 'supabase';
       }
     } catch(err) {}
   }
@@ -3007,10 +3023,9 @@ function openCheckout(){
     return s + price*i.qty;
   },0);
   
-  const settings = loadStoreSettings();
-  const city = settings?.delivery?.city || 'عفرين';
-  const min = settings?.delivery?.min || 1;
-  const max = settings?.delivery?.max || 5;
+  const city = storeSettings?.delivery?.city || 'عفرين';
+  const min = storeSettings?.delivery?.min || 1;
+  const max = storeSettings?.delivery?.max || 5;
   
   document.getElementById('checkoutBody').innerHTML = `
     <h2 style="font-size:1.15rem;font-weight:900;margin-bottom:6px;display:flex;align-items:center;gap:8px">
@@ -3218,10 +3233,9 @@ async function confirmOrder(){
   showOrderSuccess(order);
 }
 function showOrderSuccess(order){
-  const settings = loadStoreSettings();
-  const city = settings?.delivery?.city || 'عفرين';
-  const min = settings?.delivery?.min || 1;
-  const max = settings?.delivery?.max || 5;
+  const city = storeSettings?.delivery?.city || 'عفرين';
+  const min = storeSettings?.delivery?.min || 1;
+  const max = storeSettings?.delivery?.max || 5;
   
   document.getElementById('checkoutBody').innerHTML = `
     <div style="text-align:center;padding:16px 0">
@@ -3350,7 +3364,8 @@ window.addEventListener('load', async () => {
   initLogos();
   initShamQR();
   
-  // ✅ تطبيق إعدادات المتجر
+  // ✅ تحميل الأقسام والإعدادات من Supabase أولاً
+  await loadAllFromSupabase();
   applyStoreSettings();
   
   products = [...FALLBACK_PRODUCTS];
@@ -3366,9 +3381,9 @@ window.addEventListener('load', async () => {
   await fetchProducts();
   
   console.log('');
-  console.log('%c🎯 السوق الصيني - جاهز','background:#dc2626;color:white;padding:4px 8px;border-radius:4px;font-weight:bold');
-  console.log('%c🚚 إشعار التوصيل: عفرين فقط - 1$ إلى 5$','color:#3b82f6;font-weight:bold');
-  console.log('%c⚙️ الأقسام والإعدادات من localStorage','color:#8b5cf6;font-weight:bold');
+  console.log('%c🎯 السوق الصيني - جاهز (مزامنة سحابية)','background:#dc2626;color:white;padding:4px 8px;border-radius:4px;font-weight:bold');
+  console.log('%c☁️ الأقسام والإعدادات من Supabase','color:#3b82f6;font-weight:bold');
+  console.log('%c🌍 أي تعديل من لوحة التحكم يظهر لكل الزوار','color:#10b981;font-weight:bold');
   console.log('');
 });
 </script>
